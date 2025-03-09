@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F4F7FF',
+                        secondary: '#3752FD',
+                        taskDone: '#3752FD33',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-primary">
+    <header>
+        <section class="mt-5 bg-white w-[90%] m-auto p-3 rounded-lg">
+            <nav class="flex justify-between items-center">
+                <!-- navbar left items -->
+                <div class="flex items-center">
+                    <img src="./assets/logo.png" alt="" class="pr-5">
+                    <h2>Dev<span class="font-bold">Board</span></h2>
+                </div>
+                <!-- navbar right items -->
+                <div class="flex gap-3">
+                    <div class="flex items-center bg-primary rounded-3xl p-5">
+                        <div class="pr-3">
+                            <img src="./assets/checkbox.png" alt="" class="w-4 h-4">
+                        </div>
+                        <div>
+                            <p id="task-completed" class="font-bold">23</p>
+                        </div>
+                    </div>
+                    <div class="bg-primary flex justify-center items-center p-3 rounded-full">
+                        <img id="theme-change-btn" src="./assets/theme-btn.png" alt="">
+                    </div>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <main class="mt-5 mb-14 w-[90%] m-auto">
+        <!-- hero section -->
+        <section class="flex">
+            <!-- hero left div -->
+            <div class="p-3 bg-white w-3/4 rounded-lg">
+                <!-- discover row -->
+                <div class="flex gap-3 justify-between mb-5">
+                    <!-- discover row left card -->
+                    <div class="flex w-1/4 items-center bg-primary rounded-lg">
+                        <div class="p-3">
+                            <img src="./assets/checkbox.png" alt="" class="w-4 h-4">
+                        </div>
+                        <div>
+                            <p>Task assigned</p>
+                            <p id="task-assigned-number" class="font-bold">05</p>
+                        </div>
+                    </div>
+                    <!-- discover row middle card  -->
+                    <div
+                        class="flex w-2/4 items-center p-3 bg-gradient-to-r from-[#3752FD] to-[rgba(55,82,253,0.1)] rounded-lg">
+                        <a href="blog.html">
+                            <div class="flex items-center">
+                                <img src="./assets/board.png" alt="">
+                                <h4>Discover Something New Today!</h4>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- discover row right card -->
+                    <div class="flex w-1/4 items-center justify-center bg-primary rounded-lg">
+                        <div class="pr-3">
+                            <img src="./assets/calender.png" alt="">
+                        </div>
+                        <div>
+                            <p class="font-bold">
+                                <script>document.write(new Date().toDateString());</script>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- card grid -->
+                <div class="grid grid-cols-3 gap-5">
+                    <!-- card-1 -->
+                    <div class="bg-primary  p-3 rounded-lg">
+                        <!-- client name -->
+                        <div class="bg-white p-3 rounded-lg inline-block mb-3">
+                            <p>Shop Ease</p>
+                        </div>
+                        <!-- task title -->
+                        <div class="mb-3">
+                            <h4 class="task-title font-bold">Fix Mobile Button Issue</h4>
+                        </div>
+                        <!-- task description -->
+                        <div class="bg-white rounded-lg mb-3 p-4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt minus iure similique
+                                officia. Tenetur, odio?</p>
+                        </div>
+                        <!-- card last row -->
+                        <div class="flex justify-between items-center">
+                            <!-- card dateline -->
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-bold">20 March, 2025</p>
+                            </div>
+                            <!-- complete button -->
+                            <div>
+                                <button
+                                    class="completed-btn bg-secondary rounded-lg px-4 py-3 text-white">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-2 -->
+                    <div class="bg-primary  p-3 rounded-lg">
+                        <!-- client name -->
+                        <div class="bg-white p-3 rounded-lg inline-block mb-3">
+                            <p>Shop Ease</p>
+                        </div>
+                        <!-- issue name -->
+                        <div class="mb-3">
+                            <h4 class="font-bold">Fix Mobile Button Issue</h4>
+                        </div>
+                        <!-- card description -->
+                        <div class="bg-white rounded-lg mb-3 p-4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt minus iure similique
+                                officia. Tenetur, odio?</p>
+                        </div>
+                        <!-- card last row -->
+                        <div class="flex justify-between items-center">
+                            <!-- card dateline -->
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-bold">20 March, 2025</p>
+                            </div>
+                            <!-- complete button -->
+                            <div>
+                                <button class="bg-taskDone rounded-lg px-4 py-3 text-white">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-3 -->
+                    <div class="bg-primary  p-3 rounded-lg">
+                        <!-- client name -->
+                        <div class="bg-white p-3 rounded-lg inline-block mb-3">
+                            <p>Shop Ease</p>
+                        </div>
+                        <!-- task title -->
+                        <div class="mb-3">
+                            <h4 class="task-title font-bold">Fix Mobile Button Issue</h4>
+                        </div>
+                        <!-- task description -->
+                        <div class="bg-white rounded-lg mb-3 p-4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt minus iure similique
+                                officia. Tenetur, odio?</p>
+                        </div>
+                        <!-- card last row -->
+                        <div class="flex justify-between items-center">
+                            <!-- card dateline -->
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-bold">20 March, 2025</p>
+                            </div>
+                            <!-- complete button -->
+                            <div>
+                                <button
+                                    class="completed-btn bg-secondary rounded-lg px-4 py-3 text-white">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-4 -->
+                    <div class="bg-primary  p-3 rounded-lg">
+                        <!-- client name -->
+                        <div class="bg-white p-3 rounded-lg inline-block mb-3">
+                            <p>Shop Ease</p>
+                        </div>
+                        <!-- task title -->
+                        <div class="mb-3">
+                            <h4 class="task-title font-bold">Fix Mobile Button Issue</h4>
+                        </div>
+                        <!-- task description -->
+                        <div class="bg-white rounded-lg mb-3 p-4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt minus iure similique
+                                officia. Tenetur, odio?</p>
+                        </div>
+                        <!-- card last row -->
+                        <div class="flex justify-between items-center">
+                            <!-- card dateline -->
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-bold">20 March, 2025</p>
+                            </div>
+                            <!-- complete button -->
+                            <div>
+                                <button
+                                    class="completed-btn bg-secondary rounded-lg px-4 py-3 text-white">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-5 -->
+                    <div class="bg-primary  p-3 rounded-lg">
+                        <!-- client name -->
+                        <div class="bg-white p-3 rounded-lg inline-block mb-3">
+                            <p>Shop Ease</p>
+                        </div>
+                        <!-- task title -->
+                        <div class="mb-3">
+                            <h4 class="task-title font-bold">Fix Mobile Button Issue</h4>
+                        </div>
+                        <!-- task description -->
+                        <div class="bg-white rounded-lg mb-3 p-4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt minus iure similique
+                                officia. Tenetur, odio?</p>
+                        </div>
+                        <!-- card last row -->
+                        <div class="flex justify-between items-center">
+                            <!-- card dateline -->
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-bold">20 March, 2025</p>
+                            </div>
+                            <!-- complete button -->
+                            <div>
+                                <button
+                                    class="completed-btn bg-secondary rounded-lg px-4 py-3 text-white">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card-6 -->
+                    <div class="bg-primary  p-3 rounded-lg">
+                        <!-- client name -->
+                        <div class="bg-white p-3 rounded-lg inline-block mb-3">
+                            <p>Shop Ease</p>
+                        </div>
+                        <!-- task title -->
+                        <div class="mb-3">
+                            <h4 class="task-title font-bold">Fix Mobile Button Issue</h4>
+                        </div>
+                        <!-- task description -->
+                        <div class="bg-white rounded-lg mb-3 p-4">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt minus iure similique
+                                officia. Tenetur, odio?</p>
+                        </div>
+                        <!-- card last row -->
+                        <div class="flex justify-between items-center">
+                            <!-- card dateline -->
+                            <div>
+                                <p>Deadline</p>
+                                <p class="font-bold">20 March, 2025</p>
+                            </div>
+                            <!-- complete button -->
+                            <div>
+                                <button
+                                    class="completed-btn bg-secondary rounded-lg px-4 py-3 text-white">Completed</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- hero right div -->
+            <div class="p-3 bg-primary w-1/4">
+                <!-- activity row -->
+                <div class="flex justify-center items-center gap-3 mb-5">
+                    <!-- activity log icon -->
+                    <div>
+                        <img src="./assets/activity.png" alt="">
+                    </div>
+                    <!-- activity log text -->
+                    <div>
+                        <h4 class="font-bold">Activity Log</h4>
+                    </div>
+                </div>
+                <div class="flex justify-center items-center">
+                    <button id="clear-history-btn" class="bg-secondary rounded-lg px-4 py-3 text-white">Clear
+                        History</button>
+                </div>
+                <!-- history -->
+                <div id="history">
+                    <div class="task-completed-history mx-3 my-5">
+                        <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                    </div>
+                    <div class="task-completed-history mx-3 my-5">
+                        <p>You have Complete The Task Add Dark Mode at 12:48:15 PM</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <script src="buttonHandler.js"></script>
+    <script src="clearHistory.js"></script>
+    <script src="themeChange.js"></script>
+</body>
+
+</html>

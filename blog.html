@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#F4F7FF',
+                        secondary: '#3752FD',
+                        taskDone: '#3752FD33',
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-primary">
+    <header>
+        <section class="mt-5 bg-white w-[90%] m-auto p-3 rounded-lg">
+            <nav class="flex justify-between items-center">
+                <!-- navbar left items -->
+                <div class="flex items-center">
+                    <img src="./assets/logo.png" alt="" class="pr-5">
+                    <h2>Dev<span class="font-bold">Board</span></h2>
+                </div>
+                <!-- navbar right items -->
+                <div class="flex gap-3">
+                  <a href="index.html"><button class="completed-btn bg-secondary rounded-lg px-4 py-3 text-white">Back to Desk</button></a>
+                </div>
+            </nav>
+        </section>
+    </header>
+    <main>
+      <section class="w-[90%] mx-auto">
+          <!-- heading -->
+          <div class="flex justify-center my-5">
+            <h4 class="font-bold">Blog</h4>
+         </div>
+         <!-- QnA part -->
+          <div>
+            <!-- question and answer-1 -->
+             <div class="bg-white p-5 rounded-lg mb-5">
+                 <!-- question-1 -->
+             <div class="border-b-2 border-dotted pb-5">
+                <p class="font-bold">Question-1: What are the different ways to select an element in the DOM</p>
+             </div>
+             <!-- answer-1 -->
+              <div class="pt-5">
+                <p>There are 6 different ways to select an item in DOM</p>
+              </div>
+             </div>
+            <!-- question and answer-2 -->
+             <div class="bg-white p-5 rounded-lg mb-5">
+                 <!-- question-2 -->
+             <div class="border-b-2 border-dotted pb-5">
+                <p class="font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</p>
+             </div>
+             <!-- answer-2 -->
+              <div class="pt-5">
+                <p>There are 6 different ways to select an item in DOM</p>
+              </div>
+             </div>
+            <!-- question and answer-3 -->
+             <div class="bg-white p-5 rounded-lg mb-5">
+                 <!-- question-3 -->
+             <div class="border-b-2 border-dotted pb-5">
+                <p class="font-bold">Question-3: What is event delegation in the DOM?</p>
+             </div>
+             <!-- answer-3 -->
+              <div class="pt-5">
+                <p>There are 6 different ways to select an item in DOM</p>
+              </div>
+             </div>
+            <!-- question and answer-4 -->
+             <div class="bg-white p-5 rounded-lg mb-5">
+                 <!-- question-4 -->
+             <div class="border-b-2 border-dotted pb-5">
+                <p class="font-bold">Question-4: What is event bubbling in the DOM?</p>
+             </div>
+             <!-- answer-4 -->
+              <div class="pt-5">
+                <p>There are 6 different ways to select an item in DOM</p>
+              </div>
+             </div>
+            <!-- question and answer-5 -->
+             <div class="bg-white p-5 rounded-lg mb-5">
+                 <!-- question-5 -->
+             <div class="border-b-2 border-dotted pb-5">
+                <p class="font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</p>
+             </div>
+             <!-- answer-6 -->
+              <div class="pt-5">
+                <p>There are 6 different ways to select an item in DOM</p>
+              </div>
+             </div>
+           
+          </div>
+      </section>
+    </main>
+</body>
+
+
+</html>
